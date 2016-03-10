@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>News Summary</title>
+  </head>
+
+  <body>
+    <h1>
+      Actors:
+    </h1>
+
+    <ul>
+      <% @actors.each do |actor| %>
+      <li><a href=actors/<%= actor["id"] %>  target="_blank"><%= actor["name"] %></a>
+      </li>
+      <% end %>
+    </ul>
+
+  </body>
+</html>

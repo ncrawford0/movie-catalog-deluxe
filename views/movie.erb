@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Actor</title>
+  </head>
+
+  <body>
+    <h1>
+       <%= "#{@characters[0]["title"]}: #{@characters[0]["year"]}: #{@characters[0]["studio"]}: #{@characters[0]["genre"]}: #{@characters[0]["rating"]}" %>
+    </h1>
+    <ul>
+      <%  @characters.each do |character|%>
+          Actor: <a href=/actors/<%= character["actor_id"] %>  target="_blank"><%= character["actor"] %></a>
+            Role: <%= character["character"] %>
+      <% end %>
+    </ul>
+
+  </body>
+</html>

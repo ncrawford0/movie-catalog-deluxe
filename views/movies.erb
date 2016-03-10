@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>News Summary</title>
+  </head>
+
+  <body>
+    <h1>
+      Movies:
+    </h1>
+
+    <ul>
+      <% @movies.each do |movie| %>
+      <li><a href=/movies/<%= movie["id"] %>  target="_blank"><%= movie["title"] %></a>
+        Year Released: <%= movie["year"] %>
+        Rating: <%= movie["rating"] %>
+        Genre: <%= movie["genre"]%>
+        Studio: <%=  movie["studio"]  %>
+      </li>
+      <% end %>
+    </ul>
+
+  </body>
+</html>
